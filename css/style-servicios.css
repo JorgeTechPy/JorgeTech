@@ -1,0 +1,334 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS - PÁGINA SERVICIOS
+   ======================================== */
+
+/* HERO SECTION */
+.hero-servicios {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-servicios h1 {
+    color: #2c3e50;
+    font-family: 'Sora', sans-serif;
+}
+
+.hero-servicios .lead {
+    color: #495057;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.servicios-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-item i {
+    font-size: 1.3rem;
+}
+
+.feature-item span {
+    font-weight: 500;
+    color: #495057;
+}
+
+.hero-image-container {
+    position: relative;
+}
+
+.hero-image-container img {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image-container:hover img {
+    transform: scale(1.02);
+}
+
+/* SECCIÓN DE SERVICIOS CARDS */
+.servicios-cards {
+    background: white;
+}
+
+.servicios-cards h2 {
+    font-family: 'Sora', sans-serif;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* CARDS DE SERVICIOS */
+.servicio-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.servicio-card:hover .card-img-wrapper::after {
+    opacity: 1;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.servicio-card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.servicio-card .card-body {
+    padding: 25px;
+}
+
+.servicio-card .card-title {
+    font-family: 'Sora', sans-serif;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.servicio-card .card-text {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.servicio-card ul {
+    margin-top: 15px;
+}
+
+.servicio-card ul li {
+    padding: 8px 0;
+    color: #495057;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.servicio-card ul li:last-child {
+    border-bottom: none;
+}
+
+.servicio-card .card-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #e9ecef;
+}
+
+.servicio-card .btn-outline-primary {
+    border-width: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.servicio-card .btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    font-family: 'Sora', sans-serif;
+}
+
+.cta-section .btn {
+    font-weight: 600;
+    padding: 12px 30px;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .hero-servicios {
+        padding: 60px 0;
+    }
+    
+    .hero-servicios h1 {
+        font-size: 2.5rem;
+    }
+    
+    .servicios-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-servicios h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .hero-servicios .lead {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .hero-servicios .btn-primary {
+        width: 100%;
+    }
+    
+    .servicios-cards h2 {
+        font-size: 2rem;
+    }
+    
+    .card-img-wrapper {
+        padding: 10px;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-section .lead {
+        font-size: 1rem;
+    }
+    
+    .cta-section .btn-lg {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.servicio-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.servicio-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.servicio-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.servicio-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* ACCESIBILIDAD */
+.servicio-card:focus-within {
+    outline: 2px solid #0d6efd;
+    outline-offset: 4px;
+}
+
+/* MODO OSCURO (si se implementa) */
+[data-theme="dark"] .hero-servicios {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .hero-servicios h1,
+[data-theme="dark"] .servicio-card .card-title {
+    color: #f8f9fa;
+}
+
+[data-theme="dark"] .feature-item {
+    background: #2d2d2d;
+}
+
+[data-theme="dark"] .servicio-card {
+    background: #2d2d2d;
+}
+
+[data-theme="dark"] .servicio-card .card-text,
+[data-theme="dark"] .servicio-card ul li {
+    color: #adb5bd;
+}

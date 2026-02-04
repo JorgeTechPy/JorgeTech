@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JorgeTech</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="css/modo-oscuro.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.jpeg" alt="Logo JorgeTech" height="70">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/galeria.html">Galeria de Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/acerca.html">Acerca De</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/formulario.html">Formulario</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-modo-oscuro ms-sm-3">
+                                <i class="bi bi-moon-stars-fill me-1"></i> Modo Oscuro
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero d-flex align-items-center">
+            <div class="container text-center">
+                <!-- Etiqueta decorativa -->
+                <span class="hero-badge">
+                    <i class="bi bi-lightning-fill me-1"></i> Servicio rápido y confiable
+                </span>
+                <h1 class="mb-3">Servicio Técnico en<br>Celulares y Computadoras</h1>
+                <p class="mb-4">
+                    Reparaciones, mantenimiento y venta de accesorios tecnológicos
+                </p>
+                <div class="hero-buttons">
+                    <a href="paginas/servicios.html" class="btn btn-primary btn-lg">
+                        Ver servicios
+                    </a>
+                    <a href="paginas/contacto.html" class="btn btn-secondary-outline btn-lg">
+                        Contacto
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pt-5 bg-light">
+        <div class="container">
+            <div class="row">
+
+                <!-- LOGO + DESCRIPCIÓN -->
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                    <a href="index.html">
+                        <img src="img/logo.jpeg" alt="JorgeTech" style="max-height: 70px;">
+                    </a>
+                    <p class="mt-3">
+                        JorgeTech es un servicio técnico especializado en la reparación de celulares y computadoras,
+                        mantenimiento de equipos y venta de accesorios tecnológicos.
+                    </p>
+                </div>
+
+                <!-- ENLACES -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold footer-title">enlaces</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="paginas/galeria.html"><i class="bi bi-chevron-right me-1"></i>Galeria</a></li>
+                        <li><a href="paginas/servicios.html"><i class="bi bi-chevron-right me-1"></i>Servicios</a></li>
+                        <li><a href="paginas/contacto.html"><i class="bi bi-chevron-right me-1"></i>Contacto</a></li>
+                        <li><a href="paginas/acerca.html"><i class="bi bi-chevron-right me-1"></i>Acerca De</a></li>
+                        <li><a href="paginas/formulario.html"><i class="bi bi-chevron-right me-1"></i>Formulario</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACTO + MAPA -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold footer-title">contacto</h5>
+
+                    <div class="footer-contact-item">
+                        <span class="footer-icon"><i class="bi bi-telephone-fill"></i></span>
+                        <span>0975-270148</span>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <span class="footer-icon"><i class="bi bi-envelope-fill"></i></span>
+                        <span>Jorgetech.py@gmail.com</span>
+                    </div>
+
+                    <!-- REDES -->
+                    <div class="footer-redes mb-3">
+                        <a href="https://www.instagram.com/jorgetech.py" class="footer-red" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/595975270148" class="footer-red" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+
+                    <!-- MAPA -->
+                    <div class="footer-mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2742.3326684830863!2d-56.743849525830505!3d-25.5320279369341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945e9700b340bd8d%3A0x7434080cc7e0521c!2sJorgetech!5e1!3m2!1ses-419!2sus!4v1770144434895!5m2!1ses-419!2sus"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="footer-hr">
+
+            <!-- COPYRIGHT -->
+            <div class="text-center pb-3">
+                <small>
+                    © 2025 JorgeTech — Todos los derechos reservados
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN WHATSAPP -->
+    <a href="https://wa.me/595975270148?text=Hola%20JorgeTech%2C%20necesito%20soporte" class="btn-whatsapp"
+        target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/modo-oscuro.js"></script>
+</body>
+
+</html>

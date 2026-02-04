@@ -1,0 +1,1007 @@
+/* ========================================
+   ESTILOS MODO OSCURO - GLOBAL
+   ======================================== */
+
+/* Variables de colores para modo oscuro */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-light: #3a3a3a;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --border-color: #495057;
+}
+
+/* BODY Y MAIN */
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] main {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* SECCIONES GENERALES */
+[data-theme="dark"] section {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .container {
+    color: var(--text-primary);
+}
+
+/* TÍTULOS */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--text-primary);
+}
+
+/* PÁRRAFOS Y TEXTOS */
+[data-theme="dark"] p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .lead {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] strong {
+    color: var(--text-primary);
+}
+
+/* NAVBAR */
+[data-theme="dark"] .navbar {
+    background-color: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+}
+
+[data-theme="dark"] .navbar-toggler {
+    background-color: var(--bg-light);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* BOTÓN MODO OSCURO */
+[data-theme="dark"] .btn-modo-oscuro {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .btn-modo-oscuro:hover {
+    background-color: #495057;
+    color: #fff;
+}
+
+/* ===============================================
+   HERO SECTION - CORREGIDO
+   =============================================== */
+
+/* Hero principal (index.html) */
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+[data-theme="dark"] .hero::before {
+    background: radial-gradient(circle, rgba(100,150,255,0.08) 0%, transparent 70%) !important;
+}
+
+[data-theme="dark"] .hero::after {
+    background: radial-gradient(circle, rgba(100,150,255,0.06) 0%, transparent 70%) !important;
+}
+
+[data-theme="dark"] .hero-badge {
+    background: rgba(110,168,254,0.15);
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .hero h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero p {
+    color: var(--text-secondary);
+}
+
+/* Hero de servicios */
+[data-theme="dark"] .hero-servicios {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+[data-theme="dark"] .hero-servicios h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-servicios .lead {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .feature-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .feature-item span {
+    color: var(--text-secondary);
+}
+
+/* ===============================================
+   PÁGINA DE GALERÍA - PRODUCTOS
+   =============================================== */
+
+/* Hero de productos/galería */
+[data-theme="dark"] .productos-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+[data-theme="dark"] .productos-hero::before {
+    background: radial-gradient(circle, rgba(100,150,255,0.08) 0%, transparent 70%) !important;
+}
+
+[data-theme="dark"] .productos-badge {
+    background: rgba(110,168,254,0.15);
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .productos-hero h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .productos-subtitle {
+    color: var(--text-secondary);
+}
+
+/* Filtros de productos */
+[data-theme="dark"] .btn-filter {
+    background: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-filter:hover {
+    border-color: #6ea8fe;
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .btn-filter.active {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+/* Cards de productos */
+[data-theme="dark"] .producto-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .producto-card:hover {
+    box-shadow: 0 4px 16px rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .producto-img {
+    background: var(--bg-light) !important;
+}
+
+[data-theme="dark"] .producto-nombre {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .producto-precio {
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .btn-view {
+    background: var(--bg-secondary);
+    color: #6ea8fe;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .btn-view:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* Lightbox/Modal */
+[data-theme="dark"] .lightbox-overlay {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+[data-theme="dark"] .lightbox-inner {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .lightbox-img {
+    background: var(--bg-light) !important;
+}
+
+[data-theme="dark"] .lightbox-nombre {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .lightbox-precio {
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .lightbox-close {
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .lightbox-close:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+[data-theme="dark"] .lightbox-prev,
+[data-theme="dark"] .lightbox-next {
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .lightbox-prev:hover,
+[data-theme="dark"] .lightbox-next:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* ===============================================
+   PÁGINA DE FORMULARIO
+   =============================================== */
+
+/* Hero del formulario */
+[data-theme="dark"] .formulario-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+[data-theme="dark"] .formulario-hero::before {
+    background: radial-gradient(circle, rgba(100,150,255,0.08) 0%, transparent 70%) !important;
+}
+
+[data-theme="dark"] .formulario-badge {
+    background: rgba(110,168,254,0.15);
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .formulario-hero h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .formulario-subtitle {
+    color: var(--text-secondary);
+}
+
+/* Info box */
+[data-theme="dark"] .info-box {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    border-left-color: #6ea8fe;
+}
+
+[data-theme="dark"] .info-content h5 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .info-content p {
+    color: var(--text-secondary);
+}
+
+/* Card del formulario */
+[data-theme="dark"] .formulario-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+/* Selector de tipo */
+[data-theme="dark"] .btn-tipo {
+    background: var(--bg-light);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-tipo:hover {
+    background: var(--bg-secondary);
+    border-color: #6ea8fe;
+}
+
+[data-theme="dark"] .btn-check:checked + .btn-tipo {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+/* Títulos de sección */
+[data-theme="dark"] .form-section-title {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+}
+
+/* Botones de contacto alternativo */
+[data-theme="dark"] .contacto-alternativo strong {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-contacto.whatsapp {
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+[data-theme="dark"] .btn-contacto.telefono {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+}
+
+[data-theme="dark"] .btn-contacto.email {
+    box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Alertas */
+[data-theme="dark"] .alert-success {
+    background: linear-gradient(135deg, #1e4620 0%, #2d5a2f 100%);
+    color: #a3e9a4;
+    border: 1px solid #2d5a2f;
+}
+
+[data-theme="dark"] .alert-danger {
+    background: linear-gradient(135deg, #5c1f1f 0%, #7a2828 100%);
+    color: #f8d7da;
+    border: 1px solid #7a2828;
+}
+
+/* ===============================================
+   PÁGINA DE CONTACTO
+   =============================================== */
+
+/* Hero de contacto */
+[data-theme="dark"] .contacto-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+}
+
+[data-theme="dark"] .contacto-hero::before {
+    background: radial-gradient(circle at 20% 50%, rgba(100,150,255,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(100,150,255,0.06) 0%, transparent 50%) !important;
+}
+
+[data-theme="dark"] .contacto-badge {
+    background: rgba(110,168,254,0.15);
+    border-color: rgba(110,168,254,0.3);
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .contacto-hero h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .contacto-subtitle {
+    color: var(--text-secondary);
+}
+
+/* Tarjetas de contacto */
+[data-theme="dark"] .contacto-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .contacto-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .contacto-card::before {
+    opacity: 0.1;
+}
+
+[data-theme="dark"] .contacto-card h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .contacto-info {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .contacto-description {
+    color: #adb5bd;
+}
+
+/* Iconos de las tarjetas - mantener colores originales */
+[data-theme="dark"] .contacto-card.whatsapp .contacto-icon,
+[data-theme="dark"] .contacto-card.telefono .contacto-icon,
+[data-theme="dark"] .contacto-card.email .contacto-icon,
+[data-theme="dark"] .contacto-card.instagram .contacto-icon {
+    /* Los gradientes se mantienen igual para que los iconos resalten */
+    filter: brightness(0.9);
+}
+
+/* Botones de las tarjetas - mantener colores originales pero ajustar */
+[data-theme="dark"] .btn-contacto-card {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .contacto-card.whatsapp .btn-contacto-card:hover,
+[data-theme="dark"] .contacto-card.telefono .btn-contacto-card:hover,
+[data-theme="dark"] .contacto-card.email .btn-contacto-card:hover,
+[data-theme="dark"] .contacto-card.instagram .btn-contacto-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Horarios de atención */
+[data-theme="dark"] .horario-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .horario-icon {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+[data-theme="dark"] .horario-card h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .horario-item {
+    background: var(--bg-light);
+    border-left-color: #0d6efd;
+}
+
+[data-theme="dark"] .horario-dia {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .horario-hora {
+    color: var(--text-secondary);
+}
+
+/* Ubicación */
+[data-theme="dark"] .ubicacion-badge {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+[data-theme="dark"] .mapa-container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .mapa-overlay {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .mapa-info strong {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .mapa-info p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .mapa-info i {
+    color: #6ea8fe;
+}
+
+/* CTA Section de contacto */
+[data-theme="dark"] .cta-section {
+    background: linear-gradient(135deg, #0a58ca 0%, #084298 100%) !important;
+}
+
+[data-theme="dark"] .cta-section h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .cta-section p {
+    color: rgba(255,255,255,0.9);
+}
+
+[data-theme="dark"] .btn-cta {
+    background: white;
+    color: #0d6efd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .btn-cta:hover {
+    background: #f8f9fa;
+    color: #0a58ca;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* SECCIÓN DE SERVICIOS */
+[data-theme="dark"] .servicios-cards {
+    background: var(--bg-primary) !important;
+}
+
+[data-theme="dark"] .servicios-cards h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+/* CARDS DE SERVICIOS */
+[data-theme="dark"] .servicio-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .servicio-card:hover {
+    box-shadow: 0 10px 30px rgba(255,255,255,0.1) !important;
+}
+
+[data-theme="dark"] .card-img-wrapper {
+    background: var(--bg-light);
+}
+
+[data-theme="dark"] .servicio-card .card-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .servicio-card .card-text {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .servicio-card ul li {
+    color: var(--text-secondary);
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .servicio-card .card-footer {
+    border-top-color: var(--border-color);
+    background-color: transparent;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: #6ea8fe;
+    border-color: #6ea8fe;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+/* CARDS GENÉRICAS (Bootstrap) */
+[data-theme="dark"] .card {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header {
+    background-color: var(--bg-light);
+    border-bottom-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-body {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-text {
+    color: var(--text-secondary);
+}
+
+/* GALERÍA (si existe) */
+[data-theme="dark"] .galeria-item {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .galeria-item:hover {
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+/* FORMULARIOS */
+[data-theme="dark"] .form-control {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--bg-secondary);
+    border-color: #0d6efd;
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #6c757d;
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-select {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-select:focus {
+    background-color: var(--bg-secondary);
+    border-color: #0d6efd;
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] textarea.form-control {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+/* BOTONES */
+[data-theme="dark"] .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background-color: var(--bg-light);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-secondary-outline {
+    background: transparent;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-secondary-outline:hover {
+    border-color: #6ea8fe;
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .btn-light {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-light:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+/* LISTAS */
+[data-theme="dark"] ul,
+[data-theme="dark"] ol {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .list-group-item {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .list-group-item:hover {
+    background-color: var(--bg-light);
+}
+
+/* BADGES */
+[data-theme="dark"] .badge {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+/* ALERTS */
+[data-theme="dark"] .alert {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* MODALS */
+[data-theme="dark"] .modal-content {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-footer {
+    border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .close {
+    color: var(--text-primary);
+}
+
+/* FOOTER */
+[data-theme="dark"] footer {
+    background-color: var(--bg-secondary) !important;
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] footer .footer-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] footer p,
+[data-theme="dark"] footer .footer-contact-item,
+[data-theme="dark"] footer .footer-links a {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] footer .footer-links a:hover {
+    color: #0d6efd;
+}
+
+[data-theme="dark"] .footer-hr {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .footer-red {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .footer-red:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+[data-theme="dark"] footer small {
+    color: var(--text-secondary);
+}
+
+/* BOTÓN WHATSAPP */
+[data-theme="dark"] .btn-whatsapp {
+    background-color: #25D366;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* BREADCRUMBS */
+[data-theme="dark"] .breadcrumb {
+    background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .breadcrumb-item a {
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* PAGINATION */
+[data-theme="dark"] .page-link {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-link:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* TABLAS */
+[data-theme="dark"] table {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .table {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table thead {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .table tbody tr {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .table tbody tr:hover {
+    background-color: var(--bg-light);
+}
+
+[data-theme="dark"] .table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--bg-secondary);
+}
+
+/* ACORDEONES */
+[data-theme="dark"] .accordion-item {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-body {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* TABS/PESTAÑAS */
+[data-theme="dark"] .nav-tabs {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .nav-tabs .nav-link {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .nav-tabs .nav-link:hover {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-tabs .nav-link.active {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* CAROUSELS */
+[data-theme="dark"] .carousel-caption {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .carousel-control-prev-icon,
+[data-theme="dark"] .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* TOOLTIPS Y POPOVERS */
+[data-theme="dark"] .tooltip-inner {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .popover {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .popover-header {
+    background-color: var(--bg-light);
+    border-bottom-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .popover-body {
+    color: var(--text-secondary);
+}
+
+/* PROGRESS BARS */
+[data-theme="dark"] .progress {
+    background-color: var(--bg-light);
+}
+
+/* DROPDOWNS */
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-divider {
+    border-top-color: var(--border-color);
+}
+
+/* ENLACES */
+[data-theme="dark"] a {
+    color: #6ea8fe;
+}
+
+[data-theme="dark"] a:hover {
+    color: #9ec5fe;
+}
+
+/* IMÁGENES */
+[data-theme="dark"] img {
+    opacity: 0.9;
+}
+
+[data-theme="dark"] img:hover {
+    opacity: 1;
+}
+
+/* HR */
+[data-theme="dark"] hr {
+    border-color: var(--border-color);
+    opacity: 0.5;
+}
+
+/* BLOCKQUOTE */
+[data-theme="dark"] blockquote {
+    border-left-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+/* CODE */
+[data-theme="dark"] code {
+    background-color: var(--bg-light);
+    color: #f8719d;
+}
+
+[data-theme="dark"] pre {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* SECCIONES CON FONDO CLARO/GRIS */
+[data-theme="dark"] .bg-light {
+    background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* TRANSICIONES SUAVES */
+body,
+main,
+section,
+.navbar,
+.servicio-card,
+.feature-item,
+footer,
+.btn-modo-oscuro,
+.card,
+.form-control,
+.btn,
+.hero,
+.contacto-card,
+.horario-card,
+.mapa-overlay,
+.contacto-icon,
+.btn-contacto-card {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

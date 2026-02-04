@@ -1,0 +1,476 @@
+/* ========================================
+   CSS PÁGINA ACERCA DE - JORGETECH
+   ======================================== */
+
+/* Variables de color para modo claro */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --card-bg: #ffffff;
+    --hero-overlay: rgba(13, 110, 253, 0.95);
+}
+
+/* Variables de color para modo oscuro */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --border-color: #495057;
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    --card-bg: #2d2d2d;
+    --hero-overlay: rgba(13, 110, 253, 0.9);
+}
+
+/* Transiciones suaves */
+body,
+.card,
+.navbar,
+footer,
+.btn-modo-oscuro {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ajustes generales del body */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero-acerca {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-acerca::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--hero-overlay);
+    z-index: 1;
+}
+
+.hero-acerca .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-acerca h1 {
+    font-family: 'Sora', sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-acerca .lead {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   SECCIONES CON FONDO
+   ======================================== */
+.bg-light {
+    background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* ========================================
+   TARJETAS (CARDS)
+   ======================================== */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.card-body {
+    color: var(--text-primary);
+}
+
+.card.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.card.shadow {
+    box-shadow: var(--shadow-md);
+}
+
+.card.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   SECCIÓN HISTORIA
+   ======================================== */
+.py-5 h2 {
+    font-family: 'Sora', sans-serif;
+    color: var(--text-primary);
+}
+
+.py-5 p {
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+/* Imagen del logo */
+.py-5 img.img-fluid {
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   ICONOS
+   ======================================== */
+.text-primary {
+    color: #0d6efd !important;
+}
+
+[data-theme="dark"] .text-primary {
+    color: #3d8bfd !important;
+}
+
+/* ========================================
+   SECCIÓN DE VALORES
+   ======================================== */
+.text-center.p-3 {
+    transition: transform 0.3s ease;
+}
+
+.text-center.p-3:hover {
+    transform: translateY(-5px);
+}
+
+.text-center.p-3 h4 {
+    color: var(--text-primary);
+}
+
+.text-center.p-3 p {
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   SECCIÓN FUNDADOR
+   ======================================== */
+.card.shadow-lg img.rounded-circle {
+    border: 4px solid var(--border-color);
+    object-fit: cover;
+}
+
+.card.shadow-lg h3 {
+    color: var(--text-primary);
+}
+
+.card.shadow-lg .text-primary {
+    color: #0d6efd !important;
+}
+
+[data-theme="dark"] .card.shadow-lg .text-primary {
+    color: #3d8bfd !important;
+}
+
+/* ========================================
+   CÍRCULOS DE CARACTERÍSTICAS
+   ======================================== */
+.bg-primary.text-white.rounded-circle {
+    background-color: #0d6efd !important;
+}
+
+[data-theme="dark"] .bg-primary.text-white.rounded-circle {
+    background-color: #3d8bfd !important;
+}
+
+.text-center h5 {
+    color: var(--text-primary);
+}
+
+.text-center .small {
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   UBICACIÓN - MAPA
+   ======================================== */
+.card iframe {
+    border-radius: 0.375rem;
+}
+
+[data-theme="dark"] iframe {
+    filter: invert(90%) hue-rotate(180deg);
+}
+
+/* Íconos de contacto */
+.text-center i.bi {
+    transition: transform 0.3s ease;
+}
+
+.text-center:hover i.bi {
+    transform: scale(1.1);
+}
+
+.fw-semibold {
+    color: var(--text-primary);
+}
+
+/* ========================================
+   CALL TO ACTION
+   ======================================== */
+.bg-primary.text-white {
+    background-color: #0d6efd !important;
+}
+
+[data-theme="dark"] .bg-primary.text-white {
+    background-color: #0a58ca !important;
+}
+
+.bg-primary.text-white h2,
+.bg-primary.text-white p,
+.bg-primary.text-white .lead {
+    color: #ffffff !important;
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+.btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: #3d8bfd;
+    border-color: #3d8bfd;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #3d8bfd;
+    border-color: #3d8bfd;
+    color: #ffffff;
+}
+
+.btn-outline-success {
+    color: #198754;
+    border-color: #198754;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    border-color: #198754;
+    color: #ffffff;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #212529;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+/* ========================================
+   NAVBAR (desde style-general.css)
+   ======================================== */
+.navbar {
+    background-color: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #0d6efd;
+}
+
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link:hover,
+[data-theme="dark"] .navbar-light .navbar-nav .nav-link.active {
+    color: #3d8bfd;
+}
+
+/* ========================================
+   FOOTER (desde style-general.css)
+   ======================================== */
+footer {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary);
+}
+
+footer .footer-title {
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+footer .footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+footer .footer-links a:hover {
+    color: #0d6efd;
+    padding-left: 5px;
+}
+
+[data-theme="dark"] footer .footer-links a:hover {
+    color: #3d8bfd;
+}
+
+footer .footer-contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+footer .footer-icon {
+    width: 30px;
+    color: #0d6efd;
+}
+
+[data-theme="dark"] footer .footer-icon {
+    color: #3d8bfd;
+}
+
+footer .footer-redes a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+footer .footer-redes a:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+[data-theme="dark"] footer .footer-redes a:hover {
+    background-color: #3d8bfd;
+}
+
+footer .footer-hr {
+    border-color: var(--border-color);
+}
+
+footer small {
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   BOTÓN WHATSAPP FLOTANTE
+   ======================================== */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+    background-color: #20ba5a;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .hero-acerca h1 {
+        font-size: 2rem;
+    }
+
+    .hero-acerca .lead {
+        font-size: 1rem;
+    }
+
+    .card.shadow-lg img.rounded-circle {
+        max-width: 150px !important;
+    }
+
+    .btn-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .py-5 {
+        padding: 2rem 0 !important;
+    }
+
+    .bg-primary.text-white.rounded-circle {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .bg-primary.text-white.rounded-circle i {
+        font-size: 1.5rem !important;
+    }
+}

@@ -1,0 +1,397 @@
+/* ======================
+   VARIABLES
+====================== */
+
+:root {
+    --clr-primary: #0d6efd;
+    --clr-primary-dark: #0a58ca;
+    --clr-text: #333;
+    --clr-text-light: #555;
+    --clr-bg: #f5f6f8;
+    --clr-white: #ffffff;
+    --clr-footer-bg: #eef0f3;
+    --clr-footer-text: #444;
+    --font-display: 'Sora', sans-serif;
+    --font-body: 'Inter', "Segoe UI", Arial, sans-serif;
+    --radius: 12px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+    --transition: 0.25s ease;
+}
+
+/* ======================
+   BASE
+====================== */
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+
+.navbar {
+    background-color: var(--clr-white) !important;
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar .nav-link {
+    color: var(--clr-text);
+    font-weight: 500;
+    font-size: 0.92rem;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color var(--transition);
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-primary);
+    border-radius: 2px;
+    transition: width var(--transition);
+}
+
+.navbar .nav-link:hover {
+    color: var(--clr-primary);
+}
+
+.navbar .nav-link:hover::after {
+    width: 70%;
+}
+
+/* Botón modo oscuro */
+.btn-modo-oscuro {
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border-color: #ddd;
+    color: var(--clr-text);
+    background: transparent;
+    transition: all var(--transition);
+}
+
+.btn-modo-oscuro:hover {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+/* ======================
+   HERO
+====================== */
+
+.hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg, var(--clr-white) 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Círculo decorativo de fondo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(13,110,253,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(13,110,253,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Badge / etiqueta */
+.hero-badge {
+    display: inline-block;
+    background: rgba(13,110,253,0.08);
+    color: var(--clr-primary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+}
+
+.hero h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--clr-text-light);
+    max-width: 560px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ======================
+   BOTONES HERO
+====================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: var(--clr-primary);
+    border: none;
+    padding: 13px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(13,110,253,0.35);
+    transition: all var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primary-dark);
+    box-shadow: 0 6px 18px rgba(13,110,253,0.40);
+    transform: translateY(-2px);
+}
+
+.btn-secondary-outline {
+    background: transparent;
+    border: 2px solid #ccc;
+    color: var(--clr-text);
+    padding: 11px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all var(--transition);
+}
+
+.btn-secondary-outline:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+    transform: translateY(-2px);
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+footer {
+    background-color: var(--clr-footer-bg);
+    border-top: 1px solid #dde1e5;
+}
+
+.footer-title {
+    color: #1a1a1a;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+}
+
+footer p,
+footer small {
+    color: var(--clr-footer-text);
+    font-size: 0.9rem;
+}
+
+/* ENLACES */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--clr-footer-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition), padding-left var(--transition);
+}
+
+.footer-links a .bi-chevron-right {
+    font-size: 0.75rem;
+    color: var(--clr-primary);
+}
+
+.footer-links a:hover {
+    color: var(--clr-primary);
+    padding-left: 4px;
+}
+
+/* CONTACTO ITEMS */
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--clr-footer-text);
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(13,110,253,0.08);
+    border-radius: 8px;
+    color: var(--clr-primary);
+    font-size: 0.9rem;
+}
+
+/* REDES SOCIALES */
+.footer-redes {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.footer-red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--clr-text);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all var(--transition);
+}
+
+.footer-red:hover {
+    background-color: var(--clr-primary);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+/* MAPA */
+.footer-mapa {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    margin-top: 8px;
+}
+
+.footer-mapa iframe {
+    display: block;
+}
+
+/* LÍNEA DIVISORA */
+.footer-hr {
+    border: none;
+    border-top: 1px solid #dde1e5;
+    margin: 10px 0 18px;
+}
+
+/* ======================
+   WHATSAPP FLOTANTE
+====================== */
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25c943;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(37,201,67,0.45);
+    transition: all var(--transition);
+    z-index: 999;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da838;
+    box-shadow: 0 6px 20px rgba(37,201,67,0.50);
+    transform: scale(1.08);
+    color: #fff;
+}
+
+/* Animación de pulso sutil */
+.btn-whatsapp::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(37,201,67,0.4);
+    animation: pulso 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulso {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.55); opacity: 0; }
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary-outline {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+}

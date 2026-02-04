@@ -1,0 +1,519 @@
+/* ======================
+   PRODUCTOS - HERO
+====================== */
+
+.productos-hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.productos-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(13,110,253,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.productos-badge {
+    display: inline-block;
+    background: rgba(13,110,253,0.08);
+    color: var(--clr-primary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.productos-hero h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.productos-subtitle {
+    font-size: 1.1rem;
+    color: var(--clr-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ======================
+   FILTROS
+====================== */
+
+.btn-filter {
+    background: transparent;
+    border: 2px solid #e0e0e0;
+    color: var(--clr-text);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn-filter:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.btn-filter.active {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: white;
+}
+
+/* ======================
+   GRID DE PRODUCTOS
+====================== */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 20px;
+    width: 100%; /* AÑADIDO */
+    max-width: 100%; /* AÑADIDO */
+}
+
+.producto-item {
+    animation: fadeInUp 0.5s ease;
+    min-width: 0; /* AÑADIDO - Previene overflow en grid */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================
+   TARJETA DE PRODUCTO
+====================== */
+
+.producto-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    cursor: pointer;
+    width: 100%; /* AÑADIDO */
+    max-width: 100%; /* AÑADIDO */
+}
+
+.producto-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+}
+
+.producto-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%; /* Ratio 1:1 */
+    width: 100%; /* AÑADIDO */
+}
+
+.producto-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* ← CAMBIADO de cover a contain */
+    background: #f8f9fa;  /* ← AÑADIDO - fondo gris claro */
+    transition: transform 0.4s ease;
+}
+
+.producto-card:hover .producto-img {
+    transform: scale(1.08);
+}
+
+/* Overlay al hover */
+.producto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.producto-card:hover .producto-overlay {
+    opacity: 1;
+}
+
+.btn-view {
+    background: white;
+    color: var(--clr-primary);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    transform: translateY(10px);
+}
+
+.producto-card:hover .btn-view {
+    transform: translateY(0);
+}
+
+.btn-view:hover {
+    background: var(--clr-primary);
+    color: white;
+}
+
+/* Info del producto */
+.producto-info {
+    padding: 20px;
+}
+
+.producto-nombre {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.producto-precio {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin: 0;
+}
+
+/* ======================
+   LIGHTBOX / MODAL
+====================== */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* AÑADIDO */
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+    z-index: 1;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lightbox-inner {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* AÑADIDO */
+}
+
+/* AÑADIDO - Contenedor de imagen */
+.lightbox-img-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.lightbox-img {
+    width: 100%;
+    max-width: 100%; /* AÑADIDO */
+    max-height: 60vh;
+    object-fit: contain;
+    background: #f8f9fa;
+    display: block; /* AÑADIDO */
+}
+
+.lightbox-info {
+    padding: 30px;
+    text-align: center;
+    width: 100%; /* AÑADIDO */
+    box-sizing: border-box; /* AÑADIDO */
+}
+
+.lightbox-nombre {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 12px;
+    word-wrap: break-word; /* AÑADIDO */
+}
+
+.lightbox-precio {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--clr-primary);
+    margin-bottom: 24px;
+}
+
+/* Botón WhatsApp en modal */
+.btn-whatsapp-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25c943;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all var(--transition);
+    box-shadow: 0 4px 12px rgba(37,201,67,0.3);
+    max-width: 100%; /* AÑADIDO */
+    word-wrap: break-word; /* AÑADIDO */
+}
+
+.btn-whatsapp-modal:hover {
+    background: #1da838;
+    color: white;
+    box-shadow: 0 6px 18px rgba(37,201,67,0.4);
+    transform: translateY(-2px);
+}
+
+/* Controles del lightbox */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--clr-text);
+    transition: all var(--transition);
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.lightbox-close:hover {
+    background: var(--clr-primary);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--clr-text);
+    transition: all var(--transition);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--clr-primary);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 768px) {
+    .productos-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 16px;
+    }
+
+    .lightbox-content {
+        width: 95%;
+        max-width: 95%; /* AÑADIDO */
+    }
+
+    .lightbox-inner {
+        flex-direction: column;
+    }
+
+    .lightbox-img {
+        max-height: 50vh;
+    }
+
+    .lightbox-info {
+        padding: 20px 15px; /* MODIFICADO */
+    }
+
+    .lightbox-nombre {
+        font-size: 1.5rem;
+    }
+
+    .lightbox-precio {
+        font-size: 1.8rem;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+    .btn-filter {
+        font-size: 0.85rem;
+        padding: 6px 16px;
+    }
+    
+    /* AÑADIDO - Ajuste del botón WhatsApp modal */
+    .btn-whatsapp-modal {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .productos-hero {
+        padding: 60px 0 40px;
+    }
+
+    .productos-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .productos-subtitle {
+        font-size: 1rem;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px; /* MODIFICADO de 16px a 12px */
+    }
+
+    .producto-nombre {
+        font-size: 0.95rem;
+    }
+
+    .producto-precio {
+        font-size: 1.2rem;
+    }
+    
+    /* AÑADIDO - Ajustes adicionales para móviles pequeños */
+    .producto-info {
+        padding: 15px;
+    }
+    
+    .lightbox-content {
+        width: 98%; /* MODIFICADO */
+    }
+    
+    .lightbox-info {
+        padding: 15px 10px;
+    }
+    
+    .lightbox-nombre {
+        font-size: 1.3rem;
+    }
+    
+    .lightbox-precio {
+        font-size: 1.6rem;
+    }
+    
+    .btn-whatsapp-modal {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+}
